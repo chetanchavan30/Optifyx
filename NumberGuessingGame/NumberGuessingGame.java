@@ -16,7 +16,6 @@ public class NumberGuessingGame {
         System.out.println("================================================");
         System.out.println("Number Guessing Game");
         System.out.println("================================================");
-        System.out.println("Random number is : " + secretNumber);
         System.out.println("Pickup number between 1 to 100! you will get 5 turns.");
         System.out.println("Enter your gusee : ");
         userGuess = sc.nextInt();
