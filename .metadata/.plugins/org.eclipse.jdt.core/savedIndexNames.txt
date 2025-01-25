@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+C:\Users\cheta\OneDrive\Desktop\Optifyx\.metadata\.plugins\org.eclipse.jdt.core
+2058190790.index
+2801693287.index
+1514984388.index
+1693314312.index
+3006168055.index
+1865797976.index

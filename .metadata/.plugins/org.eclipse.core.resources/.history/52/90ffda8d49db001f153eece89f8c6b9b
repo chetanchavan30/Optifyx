@@ -1,0 +1,21 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import bean.User;
+
+public class InsertMarks {
+	public void insertMarks(int m, User u) {
+		Connection con = DBConnection.getConnection();
+		String insertQuery = "UPDATE users SET marks = ? WHERE username = ? AND password = ?";
+		try {
+			PreparedStatement ps = con.prepareStatement(insertQuery);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

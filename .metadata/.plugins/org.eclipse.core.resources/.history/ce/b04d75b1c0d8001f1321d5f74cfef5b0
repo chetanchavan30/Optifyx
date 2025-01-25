@@ -1,0 +1,21 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import bean.User;
+import jakarta.servlet.http.HttpServletRequest;
+
+public class LoginUser {
+	private User u;
+	public User login(HttpServletRequest req) {
+		
+		Connection con = DBConnection.getConnection();
+		PreparedStatement ps = con.prepareStatement("select * from users where username = ? and password = ?");
+		try {
+			ps.setString(1, req.getParameter("username"));
+		}
+		
+		return u;
+	}
+}

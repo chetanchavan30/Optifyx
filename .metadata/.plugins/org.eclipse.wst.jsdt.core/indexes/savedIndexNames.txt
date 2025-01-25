@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\cheta\OneDrive\Desktop\Optifyx\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3076403238.index
+3259324994.index
+4278756611.index
+2058190790.index
+4154126350.index
+2339127572.index
+2780852430.index

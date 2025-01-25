@@ -1,0 +1,63 @@
+package controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import bean.User;
+import dao.InsertMarks;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+@WebServlet("/submitAnswers")
+public class SubmitAnsServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+
+		String q1 = req.getParameter("q1");
+		String q2 = req.getParameter("q2");
+		String q3 = req.getParameter("q3");
+		String q4 = req.getParameter("q4");
+		String q5 = req.getParameter("q5");
+		String q6 = req.getParameter("q6");
+		String q7 = req.getParameter("q7");
+		String q8 = req.getParameter("q8");
+		String q9 = req.getParameter("q9");
+		String q10 = req.getParameter("q10");
+
+		String[] correctAnswers = { "0", "main", "2 bytes", "start()", "Serializable", "ArrayIndexOutOfBoundsException",
+				"Object", "try-catch", "public MyClass()", "Both of the above" };
+
+		String[] userAnswers = { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10 };
+
+		int score = 0;
+		for (int i = 0; i < correctAnswers.length; i++) {
+			if (correctAnswers[i].equals(userAnswers[i])) {
+				score++;
+			}
+		}
+
+		HttpSession hs = req.getSession();
+		if (hs == null) {
+			RequestDispatcher rd = req.getRequestDispatcher("login.html");
+			rd.include(req, response);
+		} else {
+
+			User user = (User) hs.getAttribute("user");
+			int k = new InsertMarks().insertMarks(score, user);
+
+			if (k > 0) {
+				RequestDispatcher rd = req.getRequestDispatcher("result.jsp");
+				rd.include(req, response);
+			}else {				
+				RequestDispatcher rd = req.getRequestDispatcher("login.html");
+				rd.include(req, response);
+			}
+		}
+
+	}
+}

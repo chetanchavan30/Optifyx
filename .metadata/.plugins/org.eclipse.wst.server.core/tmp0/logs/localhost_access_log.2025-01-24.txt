@@ -1,0 +1,14 @@
+127.0.0.1 - - [24/Jan/2025:23:26:56 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:26:56 +0530] "GET /OnlineExaminationSystem/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:26:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:27:02 +0530] "GET /OnlineExaminationSystem/login.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:27:10 +0530] "POST /OnlineExaminationSystem/login HTTP/1.1" 200 215
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:27:15 +0530] "GET /OnlineExaminationSystem/view HTTP/1.1" 200 103
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:27:21 +0530] "GET /OnlineExaminationSystem/exam.jsp HTTP/1.1" 200 6794
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:28:03 +0530] "POST /OnlineExaminationSystem/submitAnswers HTTP/1.1" 404 792
+127.0.0.1 - - [24/Jan/2025:23:32:27 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:32:27 +0530] "GET /OnlineExaminationSystem/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:32:54 +0530] "POST /OnlineExaminationSystem/login HTTP/1.1" 200 215
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:32:56 +0530] "GET /OnlineExaminationSystem/exam.jsp HTTP/1.1" 200 6794
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:33:07 +0530] "POST /OnlineExaminationSystem/submitAnswers HTTP/1.1" 200 11
+0:0:0:0:0:0:0:1 - - [24/Jan/2025:23:35:10 +0530] "POST /OnlineExaminationSystem/submitAnswers HTTP/1.1" 200 11
